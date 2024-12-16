@@ -1,0 +1,89 @@
+name: dev branch continuous integration workflow
+#name of the pipeline
+on: 
+#events when pipeline will be triggered
+  push:
+    branches:
+    - dev
+    #pipeline will be triggered after push on dev branch
+jobs:
+  checkout-Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  code-checkout
+        uses:  actions/checkout@v3
+        #it will use built-in actions for checkout
+      - name: setup Node.Js environment
+        uses: actions/setup-node@v3 
+        with: 
+          node-version: '18'
+        #it will use built-in action for setting up node
+      - name: Cache Node.js modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+              ${{ runner.os }}-node-
+      - name: install dependencies
+        run: npm install
+        #installing dependies 
+      - name: build the application
+        run:  npm run build
+        #building package
+        
+      - name: check Docker version
+        run: |
+          docker --version
+
+      - name: check AWS CLI version
+        run: |
+          aws --version
+
+      - name: Authenticate Docker with ECR
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+        run: |
+          aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+
+      - name: Build Docker Image
+        run: |
+          IMAGE_NAME="${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/icmfrontend"
+          docker build -t $IMAGE_NAME:latest .
+
+      - name: Push Docker Image to ECR
+        run: |
+          IMAGE_NAME="${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/icmfrontend"
+          docker push $IMAGE_NAME:latest
+
+      - name: Upload Dockerrun.aws.json to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+        run: |
+          IMAGE_URI="${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/icmfrontend:latest"
+          echo '{
+            "AWSEBDockerrunVersion": "1",
+            "Image": {
+              "Name": "'"$IMAGE_URI"'",
+              "Update": "true"
+            },
+            "Ports": [
+            {
+                "ContainerPort": "80",
+                "HostPort": "80"
+          }
+          ]
+
+          }' > Dockerrun.aws.json
+          aws s3 cp Dockerrun.aws.json s3://icm-frontend-docker-image/
+
+        
+       
+
+
+    
+  

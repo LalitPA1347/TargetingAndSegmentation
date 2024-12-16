@@ -1,0 +1,41 @@
+.accordion-container {
+  .accordion {
+    box-shadow: none;
+    background-color: #f5f7fa;
+    padding: 36px;
+    border: none;
+    .MuiAccordionSummary-root {
+      padding-left: 0;
+      padding-right: 0;
+      .MuiAccordionSummary-content {
+        margin: 0 0;
+      }
+      .MuiAccordionSummary-expandIconWrapper {
+        background-color: #eaf0f9;
+        width: 55px;
+        height: 55px;
+        flex-grow: 0;
+        margin: 0 0px 8.2px 627.9px;
+        padding: 16px;
+        border-radius: 50%;
+      }
+    }
+    .MuiAccordionDetails-root {
+      padding: 0;
+    }
+    .title {
+      font-size: 30px;
+      font-weight: 500;
+    }
+  }
+  .expanded {
+    border: 1px solid #004eea;
+    background-color: #ebf2ff;
+
+    .MuiAccordionSummary-root {
+      .MuiAccordionSummary-expandIconWrapper {
+        background-color: #fff;
+      }
+    }
+  }
+}

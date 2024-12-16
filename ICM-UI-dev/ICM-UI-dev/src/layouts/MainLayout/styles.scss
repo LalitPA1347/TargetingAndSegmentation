@@ -1,0 +1,18 @@
+.mainLayout-container {
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  overflow-x: hidden;
+  background-color: #fbfbfb;
+
+  .main-content-box {
+    padding: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .drawer-header-fixed {
+    height: 119px;
+  }
+}

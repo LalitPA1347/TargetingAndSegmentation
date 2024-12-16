@@ -1,0 +1,185 @@
+.general-setup {
+  // width: 1480px;
+  // width: 100%;
+  // height: 80vh;
+  // margin: 19px 0 33px 1.9px;
+  padding: 36px;
+  border-radius: 27.4px !important;
+  box-shadow: 19.2px 23.3px 54.8px 5.5px rgba(112, 144, 176, 0.08) !important;
+  border: solid 1.4px #e6e6e6;
+  background-color: #fff !important;
+
+  .general-setup-box {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    .box-title {
+      font-size: 38px;
+      font-weight: 500;
+      text-align: left;
+      color: #000;
+    }
+  }
+  .field-label {
+    height: 36px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    letter-spacing: 0.69px;
+    color: #333;
+  }
+  .select-container {
+    margin: 0;
+  }
+  .input-field {
+    background-color: #ffffff;
+    border-radius: 6.9px;
+    .MuiOutlinedInput-root {
+      border-radius: 6.9px;
+    }
+  }
+  .save-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+
+    .MuiButton-root {
+      height: 60px;
+      padding: 14px 20px;
+      font-size: 18px;
+      border-radius: 6.9px;
+      box-shadow: 0 11px 27.4px 0 rgba(0, 0, 0, 0.15);
+      background-color: #002060;
+      text-transform: capitalize;
+    }
+  }
+
+  .general-setup__input {
+    margin-left: 10px;
+    background-color: #ffffff;
+  }
+  .general-setup__save-button {
+    display: flex;
+    justify-content: end;
+  }
+  .business-units-box {
+    // width: 464px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 27.3px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+
+  .general-setup__unit-counter {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    /* width: 105px; */
+    height: 60px;
+    /* margin: 2px; */
+    /* gap: 8px; */
+    justify-content: center;
+
+    .MuiIconButton-root {
+      width: 45px;
+
+      height: 60px;
+      border-radius: 0;
+    }
+
+    .counts {
+      width: 47px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f7fa;
+    }
+  }
+
+  .add-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+
+    .MuiButton-root {
+      // width: 47px;
+      height: 60px;
+      padding: 14px 20px;
+      font-size: 18px;
+      border-radius: 6.9px;
+      box-shadow: 0 11px 27.4px 0 rgba(0, 0, 0, 0.15);
+      background-color: #002060;
+      text-transform: capitalize;
+    }
+  }
+
+  .general-setup__table-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 20px;
+    width: 100%;
+    border-radius: 12.6px;
+    border: solid 1px #dbdde0;
+    background-color: #fff;
+    box-shadow: none;
+  }
+
+  .general-setup__table-label {
+    max-width: 15%;
+    background-color: #ebf2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 6.3px;
+  }
+
+  .general-setup__table {
+    // max-width: calc(150px * var(--businessUnitsCount));
+    table-layout: fixed;
+    margin: 5px;
+    display: block;
+    overflow-x: auto;
+    border-radius: 6.3px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #c4cedc;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #eaf0f9;
+    }
+  }
+
+  .general-setup__table-cell--header {
+    min-width: 150px;
+    height: 45px;
+    background-color: #ebf2ff;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .general-setup__table-cell {
+    min-width: 150px;
+    height: 60px;
+    background-color: #fff8e1;
+    border-right: 1px solid #ccc;
+  }
+}
