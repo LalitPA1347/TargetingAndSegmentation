@@ -1,0 +1,25 @@
+.landing-wrapper {
+  display: flex;
+  /* height: auto; */
+  overflow: hidden;
+  // width: 100vw;
+  // height: 100vh;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.landing-wrapper-bg {
+  background-color: #f0ffff;
+}
+
+.home-Container {
+  /* flex: 1; */
+  background-color: #f0ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  border-radius: 4px;
+  z-index: 1;
+}

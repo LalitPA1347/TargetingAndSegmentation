@@ -1,0 +1,41 @@
+.dialog-main-container {
+  .close-icon {
+    transform: translate(30%, -30%);
+    z-index: 1;
+  }
+
+  .okay-button {
+    width: 100px;
+    height: 60px;
+    padding: 13.5px 20.3px;
+    border-radius: 6.8px;
+    box-shadow: 0 10.8px 27px 0 rgba(0, 0, 0, 0.25);
+    text-transform: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    background-color: #002060;
+  }
+
+  .close-button {
+    text-transform: none;
+  }
+
+  .dialogTitle {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .dialog-action {
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .dialog-content {
+    padding: 0;
+  }
+}

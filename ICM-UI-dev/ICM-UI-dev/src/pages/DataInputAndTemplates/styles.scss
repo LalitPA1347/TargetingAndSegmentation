@@ -1,0 +1,44 @@
+.data-input-template-parent-container {
+  .paper-round-edges {
+    border-radius: 27.4px;
+    padding: 35px 32px 37px 36px;
+    box-shadow: 19.2px 23.3px 54.8px 5.5px rgba(112, 144, 176, 0.08);
+    margin-bottom: 24px;
+  }
+
+  .data-input-templates-title {
+    font-size: 38px;
+    font-weight: 500;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    margin-bottom: 21px;
+  }
+
+  .data-input-checkbox-label {
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    line-height: 1.73;
+    letter-spacing: 0.67px;
+    text-align: left;
+    color: #333;
+  }
+
+  .data-input-checkbox-form-label {
+    height: 100%;
+    margin-right: 20px;
+    padding-right: 20px;
+  }
+
+  .data-input-checkbox-form-label-border {
+    border-right: solid 1.3px #e0e5ef;
+  }
+
+  .data-input-checkbox-group {
+    height: 35px;
+    margin-bottom: 29px;
+  }
+}

@@ -1,0 +1,63 @@
+// @import "../auth-css-config/auth-css-config.scss";
+
+.error-main-container {
+  //   min-height: 100vh;
+  //   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 40px;
+
+  .error-main-right-form-head {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    span.blink {
+      animation: blink 1s infinite;
+    }
+    h4 {
+      color: #002060;
+      font-family: Poppins;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      span {
+        color: #000;
+      }
+    }
+  }
+}
+.h2_error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30.26px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.error-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error_content {
+  margin: 10px;
+  color: #5f5f5f;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  overflow: auto;
+  padding: 10px;
+}
+.reload_button {
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}

@@ -1,0 +1,34 @@
+/* Apply styles to the Logout Account list item */
+.logoutItem {
+  .MuiListItemText-root {
+    color: red;
+  }
+
+  .MuiListItemIcon-root {
+    color: red;
+  }
+}
+
+/* Hover Styles */
+.MuiListItemButton-root:hover {
+  background-color: #ebf2ff !important; /* Ensure background color changes */
+  color: #004eea !important; /* Set text color on hover */
+
+  .MuiListItemIcon-root {
+    color: #004eea !important; /* Icon color on hover */
+  }
+
+  .MuiListItemText-root {
+    color: #004eea !important; /* Text color on hover */
+  }
+}
+
+.active-list-item {
+  background-color: #ebf2ff !important;
+  color: #004eea !important;
+
+  .MuiListItemIcon-root,
+  .MuiListItemText-root {
+    color: #004eea !important; /* Icon and text color */
+  }
+}

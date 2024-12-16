@@ -1,0 +1,27 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;
+  z-index: 10;
+
+  img {
+    width: 181px;
+    height: 32px;
+    // margin: 13px 35px;
+  }
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 251px;
+  height: 57px;
+  margin-left: 124px;
+  margin-top: 34px;
+}

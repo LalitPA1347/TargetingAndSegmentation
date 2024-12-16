@@ -1,0 +1,131 @@
+.verification-wrapper {
+  display: flex;
+  /* height: auto; */
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.verification-left {
+  width: 976px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  z-index: 1;
+}
+.otp-Container {
+  display: flex;
+  flex-direction: column;
+  height: 476px;
+  width: 648px;
+  margin: 277px 168px 372px 160px;
+  h6 .resend {
+    color: #004eea;
+    cursor: pointer;
+  }
+}
+.backToLoginContainer {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  /* margin-bottom: 100px; */
+  /* cursor: pointer; */
+}
+.backArrow {
+  /* font-size: 20px; */
+  color: #757575;
+  cursor: pointer;
+}
+.sentCode {
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #757575;
+  margin-top: 10px;
+}
+.verify-code {
+  /* margin-top: 40px; */
+}
+
+.enterCode {
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.78;
+  letter-spacing: 0.68px;
+  text-align: left;
+  color: #20102b;
+}
+.didnt-receive-code {
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: 0.67px;
+  text-align: left;
+  color: #333;
+}
+
+.verificationCodeText {
+  font-size: 50px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.verification-right {
+  flex: 1;
+  display: flex;
+  width: 944px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.backToLogin {
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: 0.67px;
+  text-align: left;
+  color: #000;
+}
+
+.mt_40 {
+  margin-top: 40px;
+}
+
+.mb_10 {
+  line-height: normal;
+}
+
+.mb_20 {
+  margin-top: 47px;
+  margin-bottom: 5px;
+}
+
+.mt_20 {
+  margin-top: 27px;
+}
+
+.mt_60 {
+  margin-top: 77px;
+}

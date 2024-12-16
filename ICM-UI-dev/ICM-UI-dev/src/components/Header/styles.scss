@@ -1,0 +1,42 @@
+.custom-header {
+  background-color: #fff !important;
+  box-shadow: 14px 17px 40px 4px rgba(112, 144, 176, 0.08) !important;
+}
+
+.menu-icon {
+  color: #757575;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-profile-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.notification-icon {
+  color: #757575;
+}
+
+.user-container {
+  display: flex;
+  gap: 10px;
+}
+
+.user-info {
+  h6 {
+    color: #757575;
+  }
+  h5 {
+    color: black;
+  }
+}
+
+.header-toolbar-container {
+  height: 100%;
+}

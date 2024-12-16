@@ -1,0 +1,20 @@
+.search-container {
+  display: flex;
+  width: 220px;
+  padding: 4px;
+  align-items: center;
+  color: #757575;
+
+  .search-icon {
+    margin-top: 3px;
+  }
+
+  .search-input {
+    border: none;
+    margin-left: 5px;
+  }
+
+  .search-input:focus {
+    outline: none;
+  }
+}
